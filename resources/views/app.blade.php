@@ -28,5 +28,14 @@
         </div>
         
     </div>
+    <script>
+        document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + 'px');
+    </script>
+    <style>
+        .h-screen {
+            height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+            height: calc(var(--vh, 1vh) * 100);
+        }
+    </style>
 </body>
 </html>
