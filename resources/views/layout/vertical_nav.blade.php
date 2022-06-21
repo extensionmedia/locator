@@ -30,7 +30,7 @@ $links = [
         </ul>
     </div>
     <div class="lg:px-4">
-        <ul class="text-gray-200 mt-2">
+        <ul class="text-gray-200">
             <li>
                 <a href="" class="flex items-center hover:bg-gray-600 cursor-pointer py-2 lg:px-2 lg:-mx-2 rounded-md mb-2 lg:mb-1">
                     <div class="w-full text-xl lg:text-base lg:w-6 text-center lg:text-left"><i class="fas fa-cogs"></i></div>
