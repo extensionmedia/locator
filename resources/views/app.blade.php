@@ -22,7 +22,7 @@
             @include('layout.vertical_nav')
         </div>
         <div class="flex-1 pt-4 pr-4">
-            <div class="bg-white h-full" style="border-top-left-radius: 30px; border-top-right-radius: 30px">
+            <div class="bg-white h-screen" style="border-top-left-radius: 30px; border-top-right-radius: 30px">
                 content here
             </div>
         </div>
