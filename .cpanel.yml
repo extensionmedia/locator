@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home2/extensionmedia/locator_public/
+    - /bin/cp -r ./public/js/* $DEPLOYPATH/js
+    - /bin/cp -r ./public/css/* $DEPLOYPATH/css
