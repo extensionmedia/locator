@@ -20,8 +20,8 @@
         </div>
 
         <div class="lg:flex gap-4">
-            <div class="bg-white rounded shadow-lg flex-1">
-                <canvas id="myChart"></canvas>
+            <div class="bg-white rounded shadow-lg flex-1 py-4 px-4">
+                <canvas id="myChart" class="w-full"></canvas>
             </div>
             <div class="bg-white rounded shadow-lg flex-1">
                 
@@ -58,14 +58,19 @@
             backgroundColor: 'rgb(0, 99, 132)',
             borderColor: 'rgb(0, 99, 132)',
             data: [19500, 3456, 19000, 75000, 75000, 1450, 4500, 83456, 19000, 67000, 5000, 1450],
-          }
-        ]
+          }]
         };
       
+        var _options = {
+            borderRadius: 1,
+            barPercentage: 1.5,
+            barThickness: 8,
+        };
+
         const config = {
           type: 'bar',
           data: data,
-          options: {}
+          options: _options,
         };
 
         const myChart = new Chart(
