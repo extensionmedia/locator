@@ -608,6 +608,15 @@ video {
 .h-16 {
   height: 4rem;
 }
+.h-6 {
+  height: 1.5rem;
+}
+.h-4 {
+  height: 1rem;
+}
+.h-5 {
+  height: 1.25rem;
+}
 .w-full {
   width: 100%;
 }
@@ -1046,8 +1055,16 @@ video {
     margin-top: 2rem;
   }
 
+  .md\:hidden {
+    display: none;
+  }
+
   .md\:w-\[50px\] {
     width: 50px;
+  }
+
+  .md\:gap-4 {
+    gap: 1rem;
   }
 }
 
@@ -1090,6 +1107,10 @@ video {
     display: flex;
   }
 
+  .lg\:hidden {
+    display: none;
+  }
+
   .lg\:h-8 {
     height: 2rem;
   }
@@ -1108,6 +1129,10 @@ video {
 
   .lg\:w-1\/2 {
     width: 50%;
+  }
+
+  .lg\:gap-4 {
+    gap: 1rem;
   }
 
   .lg\:px-0 {
