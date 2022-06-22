@@ -1,6 +1,10 @@
 @extends('app')
+@section('includes')
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+@endsection
+
 @section('content')
-    <div class="container">
+    <div class="container pb-4">
         <div class="text-3xl">
             Dashboard
         </div>
@@ -9,32 +13,65 @@
         </p>
 
         <div class="lg:flex gap-8 w-full mt-4">
-            @for ($i = 0; $i < 4; $i++)
-                <div class="flex-1 rounded overflow-hidden border-l-4  border-blue-800 shadow-lg mb-4 2xl:mb-0 py-4 px-4 2xl:px-8 bg-white">
-                    <div class="flex items-center justify-between mb-2">
-                        <div class="">
-                            <div class="2xl:text-2xl">
-                                24.500,00 MAD
-                            </div>
-                            <p class="font-light text-sm text-gray-500">
-                                Total Recettes
-                            </p>
-                        </div>
-                        <div class="rounded-full w-12 h-12 bg-blue-800 text-white pt-2 text-center text-xl">
-                            <i class="fa-solid fa-cash-register"></i>
-                        </div>
-                    </div>
-                    <div class="flex gap-2 items-center py-2">
-                        <div class="flex items-center gap-1 text-green-500 text-sm">
-                            <i class="fa-solid fa-arrow-up"></i> 12%
-                        </div>
-                        <div class="text-xs text-gray-500">
-                            Par rapport  le mois dernier
-                        </div>
-                    </div>
-                </div>                
-            @endfor
+            @foreach ($marqees as $m)
+                @include('pages.home.marqees.'.$m)
+            @endforeach               
+
+        </div>
+
+        <div class="lg:flex gap-4">
+            <div class="bg-white rounded shadow-lg flex-1">
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="bg-white rounded shadow-lg flex-1">
+                
+            </div>
 
         </div>
     </div>
+
+    <script>
+        const labels = [
+          '01',
+          '02',
+          '03',
+          '04',
+          '05',
+          '06',
+          "08",
+          "09",
+          "10",
+          "11",
+          "12"
+        ];
+      
+        const data = {
+          labels: labels,
+          datasets: [{
+            label: '2021',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [14500, 33456, 19000, 65000, 25000, 13450, 4500, 3456, 9000, 19000, 25000, 13450],
+          },
+          {
+            label: '2022',
+            backgroundColor: 'rgb(0, 99, 132)',
+            borderColor: 'rgb(0, 99, 132)',
+            data: [19500, 3456, 19000, 75000, 75000, 1450, 4500, 83456, 19000, 67000, 5000, 1450],
+          }
+        ]
+        };
+      
+        const config = {
+          type: 'bar',
+          data: data,
+          options: {}
+        };
+
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+      </script>
+
 @endsection

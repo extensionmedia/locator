@@ -11,6 +11,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,700&display=swap" rel="stylesheet">
+        <script src="{{asset('js/jquery.3.6.0.js')}}"></script>
+
+        @yield('includes') 
+        
         <style>
             body{
                 font-family: 'Roboto Flex', sans-serif;
@@ -32,7 +36,7 @@
                     @include('layout.header')
                 </div>
 
-                <div class="flex-1 px-4 pt-4 bg-gray-50 w-full">
+                <div class="flex-1 px-4 pt-4 bg-gray-50 w-full overflow-y-auto">
                   @yield('content') 
                 </div>
                 
@@ -42,13 +46,9 @@
         
     </div>
     <script>
-        document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + 'px');
+        $(document).ready(function(){
+            //Jquery
+        })
     </script>
-    <style>
-        .h-screen {
-            height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-            height: calc(var(--vh, 1vh) * 100);
-        }
-    </style>
 </body>
 </html>
