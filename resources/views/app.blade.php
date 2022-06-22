@@ -24,11 +24,11 @@
 <body>
     <div class="h-screen w-full relative flex bg-gray-800 overflow-hidden">
 
-        <div class=" w-[50px] lg:w-[174px]">
+        <div class="w-[5px] md:w-[50px] lg:w-[174px]">
             @include('layout.vertical_nav')
         </div>
 
-        <div class="flex-1 pt-4 pr-4">
+        <div class="flex-1 pt-4 pr-2 lg:pr-4">
 
             <div class="bg-white h-full w-full flex flex-col" style="border-top-left-radius: 30px; border-top-right-radius: 30px">
 
