@@ -4,7 +4,7 @@
 @endsection
 
 @section('content')
-    <div class="container pb-4">
+    <div class="mx-auto container pb-4">
         <div class="text-3xl">
             Dashboard
         </div>
@@ -19,69 +19,15 @@
 
         </div>
 
-        <div class="lg:flex gap-4">
+        <div class="lg:flex gap-4 mt-4 w-full overflow-hidden">
             <div class="bg-white rounded shadow-lg flex-1 py-4 px-4">
-                <canvas id="myChart" class="w-full"></canvas>
+
             </div>
-            <div class="bg-white rounded shadow-lg flex-1">
-               
+            <div class="bg-white rounded shadow-lg flex-1 py-4 px-4">
+               @include('pages.home.charts.bar_sum_by_month')
             </div>
 
         </div>
     </div>
-
-    <script>
-        const labels = [
-          '01',
-          '02',
-          '03',
-          '04',
-          '05',
-          '06',
-          "08",
-          "09",
-          "10",
-          "11",
-          "12"
-        ];
-      
-        const data = {
-          labels: labels,
-          datasets: [{
-            label: '2021',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [14500, 33456, 19000, 65000, 25000, 13450, 4500, 3456, 9000, 19000, 25000, 13450],
-          },
-          {
-            label: '2022',
-            backgroundColor: 'rgb(0, 99, 132)',
-            borderColor: 'rgb(0, 99, 132)',
-            data: [19500, 3456, 19000, 75000, 75000, 1450, 4500, 83456, 19000, 67000, 5000, 1450],
-          }]
-        };
-      
-        var _options = {
-            borderRadius: 1,
-            barPercentage: 1.5,
-            barThickness: 8,
-            scales: {
-                y: {
-                    display: false
-                }
-            },
-        };
-
-        const config = {
-          type: "bar",
-          data: data, 
-          options: _options,
-        };
-
-        const myChart = new Chart(
-            document.getElementById('myChart'),
-            config
-        );
-      </script>
 
 @endsection

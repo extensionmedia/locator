@@ -14,7 +14,7 @@
         <script src="{{asset('js/jquery.3.6.0.js')}}"></script>
 
         @yield('includes') 
-        
+
         <style>
             body{
                 font-family: 'Roboto Flex', sans-serif;
@@ -30,7 +30,7 @@
 
         <div class="flex-1 pt-4 pr-4">
 
-            <div class="bg-white h-full flex flex-col" style="border-top-left-radius: 30px; border-top-right-radius: 30px">
+            <div class="bg-white h-full w-full flex flex-col" style="border-top-left-radius: 30px; border-top-right-radius: 30px">
 
                 <div class="bg-gray-150 w-full h-12 shadow" style="border-top-left-radius: 30px; border-top-right-radius: 30px">
                     @include('layout.header')
