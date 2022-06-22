@@ -24,7 +24,7 @@
 <body>
     <div class="h-screen w-full relative flex bg-gray-800 overflow-hidden">
 
-        <div class="w-[5px] md:w-[50px] lg:w-[174px]">
+        <div class="vertical_menu w-[5px] md:w-[50px] lg:w-[174px]">
             @include('layout.vertical_nav')
         </div>
 
@@ -45,9 +45,20 @@
         </div>
         
     </div>
+    <div class="show_menu md:hidden cursor-pointer fixed left-0 bottom-0 text-center text-white text-2xl w-8 py-1 bg-gray-700 bg-opacity-20 hover:bg-opacity-60 rounded-r-lg mb-4 ml-2">
+        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+    </div>
     <script>
         $(document).ready(function(){
-            //Jquery
+            $(".show_menu").on('click', function(){
+                if($(".vertical_menu").css('width') == "5px"){
+                    $(".vertical_menu").css('width', '50px');
+                    $(this).addClass("ml-12")
+                }else{
+                    $(".vertical_menu").css('width', '5px');
+                    $(this).removeClass("ml-12").addClass("ml-2")
+                }
+            })
         })
     </script>
 </body>
