@@ -24,7 +24,7 @@
                 <canvas id="myChart" class="w-full"></canvas>
             </div>
             <div class="bg-white rounded shadow-lg flex-1">
-                
+               
             </div>
 
         </div>
@@ -65,11 +65,16 @@
             borderRadius: 1,
             barPercentage: 1.5,
             barThickness: 8,
+            scales: {
+                y: {
+                    display: false
+                }
+            },
         };
 
         const config = {
-          type: 'bar',
-          data: data,
+          type: "bar",
+          data: data, 
           options: _options,
         };
 
