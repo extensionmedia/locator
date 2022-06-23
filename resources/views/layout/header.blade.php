@@ -1,7 +1,7 @@
 <div class="h-full border-b flex justify-between items-center px-4">
-    <div class="">
+    <a href="{{route('home')}}" class="transform  transition duration-500 hover:scale-75">
         <img class="md:hidden h-5 lg:mr-2" src="{{ asset('images/locator_logo_small.png') }}">
-    </div>
+    </a>
     <div class="flex gap-2 md:gap-4">
         <div class="rounded-full h-8 w-8 pt-1 text-center cursor-pointer border hover:border-pink-100 hover:bg-gray-700 hover:text-white">
             <i class="fa-solid fa-magnifying-glass"></i>
