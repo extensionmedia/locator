@@ -12,6 +12,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,700&display=swap" rel="stylesheet">
         <script src="{{asset('js/jquery.3.6.0.js')}}"></script>
+        <script src="{{asset('js/app.js')}}"></script>
 
         @yield('includes') 
 
@@ -22,13 +23,13 @@
         </style>
     </head>
 <body>
-    <div class="h-screen w-full relative flex bg-gray-800 overflow-hidden">
+    <div id="app" class="h-screen w-full relative flex bg-gray-800 overflow-hidden">
 
         <div class="vertical_menu w-[5px] md:w-[50px] lg:w-[174px]">
             @include('layout.vertical_nav')
         </div>
 
-        <div class="flex-1 pt-4 pr-2 lg:pr-4">
+        <main class="flex-1 pt-4 pr-2 lg:pr-4">
 
             <div class="bg-white h-full w-full flex flex-col" style="border-top-left-radius: 30px; border-top-right-radius: 30px">
 
@@ -36,13 +37,13 @@
                     @include('layout.header')
                 </div>
 
-                <div class="flex-1 px-4 pt-4 bg-gray-50 w-full overflow-y-auto">
+                <content class="flex-1 px-4 pt-4 bg-gray-50 w-full overflow-y-auto">
                   @yield('content') 
-                </div>
+                </content>
                 
             </div>
 
-        </div>
+        </main>
         
     </div>
     <div class="show_menu md:hidden cursor-pointer fixed left-0 bottom-0 text-center text-white text-2xl w-8 py-1 bg-gray-700 bg-opacity-20 hover:bg-opacity-60 rounded-r-lg mb-4 ml-2">

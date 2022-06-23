@@ -2164,6 +2164,21 @@ module.exports = {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+$(document).ready(function () {
+  var Base_URL = window.location.origin;
+  $('.navigation').on('click', function (e) {
+    e.preventDefault();
+    window.history.pushState("", "", Base_URL + $(this).data('url'));
+    /*
+    if (window._hasPushState) {
+        window.history[options.replace ? 'replaceState' : 'pushState']({}, document.title, Base_URL + $(this).data('url'));
+    }else{
+        alert('not')
+    }
+    */
+  });
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

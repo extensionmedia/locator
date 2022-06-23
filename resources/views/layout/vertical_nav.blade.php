@@ -1,12 +1,12 @@
 <?php
 $links = [
-    ['<i class="fas fa-home"></i>', 'Dashboard', route("home")],
-    ['<i class="fas fa-hourglass-half"></i>', 'Locations', route("home")],
-    ['<i class="far fa-address-card"></i>', 'Clients', route("home")],
-    ['<i class="fas fa-car-alt"></i>', 'Park Auto', route("home")],
-    ['<i class="fas fa-cash-register"></i>', 'Depenses', route("home")],
-    ['<i class="fas fa-donate"></i>', 'Finances', route("home")],
-    ['<i class="fas fa-user-friends"></i>', 'Utilisateurs', route("home")]
+    ['<i class="fas fa-home"></i>', 'Dashboard', route("home"), "/"],
+    ['<i class="fas fa-hourglass-half"></i>', 'Locations', route("home"), "/"],
+    ['<i class="far fa-address-card"></i>', 'Clients', route("home"), "/"],
+    ['<i class="fas fa-car-alt"></i>', 'Park Auto', route("home"), "/"],
+    ['<i class="fas fa-cash-register"></i>', 'Depenses', route("home"), "/"],
+    ['<i class="fas fa-donate"></i>', 'Finances', route("home"), "/"],
+    ['<i class="fas fa-user-friends"></i>', 'Utilisateurs', route("home"), "/"]
 ]
 ?>
 <div class="flex flex-col justify-between pb-4 h-full px-2 lg:px-0">
@@ -32,13 +32,13 @@ $links = [
     <div class="lg:px-4">
         <ul class="text-gray-200">
             <li>
-                <a href="" class="flex items-center hover:bg-gray-600 cursor-pointer py-2 lg:px-2 lg:-mx-2 rounded-md mb-2 lg:mb-1">
+                <a href="" class="navigation flex items-center hover:bg-gray-600 cursor-pointer py-2 lg:px-2 lg:-mx-2 rounded-md mb-2 lg:mb-1" data-url="/params">
                     <div class="w-full text-xl lg:text-base lg:w-6 text-center lg:text-left"><i class="fas fa-cogs"></i></div>
                     <div class="flex-1 text-sm hidden lg:block">{{ __('Paramêtres') }}</div>
                 </a>
             </li>
             <li>
-                <a href="" class="flex items-center hover:bg-gray-600 cursor-pointer py-2 lg:px-2 lg:-mx-2 rounded-md mb-2 lg:mb-1">
+                <a href="" class="navigation flex items-center hover:bg-gray-600 cursor-pointer py-2 lg:px-2 lg:-mx-2 rounded-md mb-2 lg:mb-1" data-url="/support">
                     <div class="w-full text-xl lg:text-base lg:w-6 text-center lg:text-left"><i class="far fa-question-circle"></i></div>
                     <div class="flex-1 text-sm hidden lg:block">{{ __('Support') }} </div>
                 </a>
