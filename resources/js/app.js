@@ -6,23 +6,36 @@ $(document).ready(function(){
 
     $(window).on('popstate', function (e) {
         var state = e.originalEvent.state;
-        if (state !== null) {
-           console.log('state')
-        }else{
-            console.log('state2222')
-        }
+        $(".navigation").each(function(){
+            if(state == null){
+                if($(this).data('url') == Base_URL){
+                    $(this).trigger('click')
+                }
+            }else{
+                if($(this).data('url') == state){
+                    $(this).trigger('click')
+                }
+            }
+        })
     });
 
     $('.navigation').on('click', function(e){
+
         e.preventDefault()
-        window.history.pushState("", "New title", Base_URL + $(this).data('url'));
-        /*
-        if (window._hasPushState) {
-            window.history[options.replace ? 'replaceState' : 'pushState']({}, document.title, Base_URL + $(this).data('url'));
-        }else{
-            alert('not')
-        }
-        */
+
+        $(".navigation").removeClass('bg-gray-600')
+        $(this).addClass('bg-gray-600')
+
+        window.history.pushState($(this).data('url'), "", $(this).data('url'));
+
+        $.ajax({
+            url         :   $(this).data('url'),
+            success     :   function(response){
+                $("content").html(response)
+            }
+            
+        })
+
     })
 
 })
