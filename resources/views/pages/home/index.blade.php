@@ -1,7 +1,8 @@
 @extends('app')
+
 @section('includes')
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
-@endsection
+@endsection    
 
 @section('content')
     <div class="mx-auto container pb-8">
@@ -43,5 +44,4 @@
             </div>
         </div>
     </div>
-
 @endsection

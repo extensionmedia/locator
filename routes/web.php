@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AjaxController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::post('/content', [AjaxController::class, 'content'])->name('ajax.content');
+
+Route::get('/rent', [RentController::class, 'index'])->name('rent');
+
+
 
 Route::get('/params', function(){
     return 'params';
@@ -24,9 +31,6 @@ Route::get('/support', function(){
     return 'support';
 })->name('support');
 
-Route::get('/rent', function(){
-    return 'rent';
-})->name('rent');
 
 Route::get('/client', function(){
     return 'client';
