@@ -21,7 +21,7 @@ $links = [
         <ul class="text-gray-200 mt-2">
             @foreach ($links as $l)
                 <li>
-                    <a href="<?= $l[2] ?>" class="navigation @if(Route::currentRouteName() == $l[3]) bg-gray-600  @endif flex items-center hover:bg-gray-600 cursor-pointer py-2 lg:px-2 lg:-mx-2 rounded-md mb-2 lg:mb-1" data-url="<?= $l[2] ?>">                    
+                    <a data-content="<?= $l[3] ?>" href="<?= $l[2] ?>" class="navigation @if(Route::currentRouteName() == $l[3]) bg-gray-600  @endif flex items-center hover:bg-gray-600 cursor-pointer py-2 lg:px-2 lg:-mx-2 rounded-md mb-2 lg:mb-1" data-url="<?= $l[2] ?>">                    
                         <div class="w-full text-xl lg:text-base lg:w-6 text-center lg:text-left"><?= $l[0] ?></div>
                         <div class="flex-1 text-sm hidden lg:block"><?= $l[1] ?></div>
                     </a>

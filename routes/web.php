@@ -17,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/skeleton', function(){
+    return view('layout.skeleton.content');
+})->name('skeleton');
+
 Route::post('/content', [AjaxController::class, 'content'])->name('ajax.content');
 
 Route::get('/rent', [RentController::class, 'index'])->name('rent');

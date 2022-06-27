@@ -4,22 +4,16 @@ $(document).ready(function(){
 
     var Base_URL = window.location.origin;
 
-    var Skeleton_Loader = `
-        <div class="container bg-white shadow-lg h-full">
-            container
-        </div>
+    var Skeleton_Loader = ``;
 
-
-        <div class="hidden w-60 h-24 border-2 rounded-md mx-auto mt-20">
-            <div class="flex animate-pulse flex-row items-center h-full justify-center space-x-5">
-                <div class="w-12 bg-gray-300 h-12 rounded-full "> </div>
-                <div class="flex flex-col space-y-3">
-                    <div class="w-36 bg-gray-300 h-6 rounded-md "> </div>
-                    <div class="w-24 bg-gray-300 h-6 rounded-md "> </div>
-                </div>
-            </div>
-        </div>
-    `;
+    $.ajax({
+        url: "/skeleton",
+        method: "GET",
+    }).done(function(response) {
+        Skeleton_Loader = response
+    }).fail(function (error) {
+        console.log(error);
+    });
 
 
     $(window).on('popstate', function (e) {
@@ -47,17 +41,14 @@ $(document).ready(function(){
 
         window.history.pushState($(this).data('url'), "", $(this).data('url'));
         $("content").html(Skeleton_Loader)
-        var url = $(this).data('url');
 
-        var payload = JSON.stringify({
-                content : 'rent'
-            });
+        var content = $(this).data('content');
 
         $.ajax({
             url: "/content",
             method: "POST",
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            data: payload,
+            data: {content: content},
         }).done(function(response) {
             $("content").html(response)
         }).fail(function (error) {

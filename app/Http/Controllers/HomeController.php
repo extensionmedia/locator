@@ -13,10 +13,10 @@ class HomeController extends Controller{
             "contract",
             "auto",
         ];
-        return view('pages.home.index', ["marqees" => $marqees, "activities"=>$this->usersActivities()]);
+        return view('pages.home.index', ["marqees" => $marqees, "activities"=>$this::usersActivities()]);
     }
 
-    public function usersActivities(){
+    public static function usersActivities(){
         $images = [
             'http://rubick-vue.left4code.com/assets/profile-11.97c505a8.jpg',
             'http://rubick-vue.left4code.com/assets/profile-13.d2befb57.jpg',
