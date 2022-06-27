@@ -2,11 +2,11 @@
 $links = [
     ['<i class="fas fa-home"></i>', 'Dashboard', route("home"), "home"],
     ['<i class="fas fa-hourglass-half"></i>', 'Locations', route("rent"), "rent"],
-    ['<i class="far fa-address-card"></i>', 'Clients', route("client"), "client"],
-    ['<i class="fas fa-car-alt"></i>', 'Park Auto', route("car"), "car"],
-    ['<i class="fas fa-cash-register"></i>', 'Depenses', route("expense"), "expense"],
-    ['<i class="fas fa-donate"></i>', 'Finances', route("finance"), "finance"],
-    ['<i class="fas fa-user-friends"></i>', 'Utilisateurs', route("user"), "user"]
+    ['<i class="far fa-address-card"></i>', 'Clients', route("home"), "client"],
+    ['<i class="fas fa-car-alt"></i>', 'Park Auto', route("home"), "car"],
+    ['<i class="fas fa-cash-register"></i>', 'Depenses', route("home"), "expense"],
+    ['<i class="fas fa-donate"></i>', 'Finances', route("home"), "finance"],
+    ['<i class="fas fa-user-friends"></i>', 'Utilisateurs', route("home"), "user"]
 ]
 ?>
 <div class="flex flex-col justify-between pb-4 h-full px-2 lg:px-0">
@@ -32,13 +32,13 @@ $links = [
     <div class="lg:px-4">
         <ul class="text-gray-200">
             <li>
-                <a href="{{route('params')}}" class="navigation flex items-center hover:bg-gray-600 cursor-pointer py-2 lg:px-2 lg:-mx-2 rounded-md mb-2 lg:mb-1" data-url="{{route('params')}}">
+                <a href="{{route('home')}}" class="navigation flex items-center hover:bg-gray-600 cursor-pointer py-2 lg:px-2 lg:-mx-2 rounded-md mb-2 lg:mb-1" data-url="{{route('home')}}">
                     <div class="w-full text-xl lg:text-base lg:w-6 text-center lg:text-left"><i class="fas fa-cogs"></i></div>
                     <div class="flex-1 text-sm hidden lg:block">{{ __('Paramêtres') }}</div>
                 </a>
             </li>
             <li>
-                <a href="{{route('support')}}" class="navigation flex items-center hover:bg-gray-600 cursor-pointer py-2 lg:px-2 lg:-mx-2 rounded-md mb-2 lg:mb-1" data-url="{{route('support')}}">
+                <a href="{{route('home')}}" class="navigation flex items-center hover:bg-gray-600 cursor-pointer py-2 lg:px-2 lg:-mx-2 rounded-md mb-2 lg:mb-1" data-url="{{route('home')}}">
                     <div class="w-full text-xl lg:text-base lg:w-6 text-center lg:text-left"><i class="far fa-question-circle"></i></div>
                     <div class="flex-1 text-sm hidden lg:block">{{ __('Support') }} </div>
                 </a>

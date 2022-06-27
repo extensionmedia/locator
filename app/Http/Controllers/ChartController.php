@@ -14,7 +14,7 @@ class ChartController extends Controller
         }
         $currentYear = date("Y");
         $previousYear = intval($currentYear)-1;
-        
+
         $chartBackgroundColors = [
                 "rgb(255, 99, 132)",
                 "rgb(0, 99, 132)"
@@ -34,6 +34,6 @@ class ChartController extends Controller
             ]
         ];
 
-
+        return $datasets;
     }
 }

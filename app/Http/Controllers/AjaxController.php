@@ -24,6 +24,6 @@ class AjaxController extends Controller
         if(view()->exists('pages.'.$content.'.content'))
             return view('pages.'.$content.'.content', $params);
             
-        return view('errors.404');
+        return view('errors.404.404');
     }
 }
