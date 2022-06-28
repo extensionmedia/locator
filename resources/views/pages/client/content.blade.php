@@ -47,6 +47,49 @@
             </div>
         </div>        
     </div>
-
-
 </div>
+
+<div class="bg-white shadow-md rounded my-6 pb-6 relative overflow-auto">
+    <table class="min-w-max w-full table-auto whitespace-nowrap">
+        <thead>
+            <tr class="bg-gray-200 py-2 text-xs font-normal uppercase">
+                <th class="py-3 w-20">Img</th>
+                <th class="py-3 text-left">Client</th>
+                <th class="py-3 text-left hidden md:table-cell">Téléphone</th>
+                <th class="py-3 text-center hidden md:table-cell">Ville</th>
+                <th class="py-3 hidden md:table-cell">Status</th>
+                <th class="py-3 text-right pr-2">Locations</th>
+                <th class="py-3 text-right pr-2">Crédit</th>
+                <th class="py-3"></th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr class="border-b hover:bg-gray-100" style="transition: all .3s">
+                    <td class="py-1" style="min-width: 60px">
+                        <img class="object-cover w-10 h-10 rounded-full mx-auto" src="http://rubick-vue.left4code.com/assets/profile-10.7f88f31b.jpg">
+                    </td>
+                    <td>
+                        Yassine elme
+                    </td>
+                    <td class="w-28  hidden md:table-cell">
+                            +212661098984 
+                    </td>
+                    <td class="w-28 text-center hidden md:table-cell">
+                        Tetouan
+                    </td>
+                    <td class="w-28 text-center hidden md:table-cell">
+                        status
+                    </td>
+                    <td class="w-24 text-right text-xs font-bold text-orange-400 pr-2"> {{ number_format(12400, 2) }} </td>
+                    <td class="w-24 text-right text-xs font-bold text-pink-600 pr-2 ">{{ number_format(10000, 2) }} </td>
+                    <td class="w-14 text-center">
+                        <form class="m-0" method="POST" action="">
+                            @csrf()
+                            <button type="submit" class="btn"><i class="fas fa-ellipsis-h"></i></button>
+                        </form>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+</div>
+
