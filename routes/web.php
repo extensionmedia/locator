@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AjaxController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RentController;
 use Illuminate\Support\Facades\Route;
@@ -28,5 +29,7 @@ Route::get('/errors/404', function(){
 Route::post('/content', [AjaxController::class, 'content'])->name('ajax.content');
 
 Route::get('/rent', [RentController::class, 'index'])->name('rent');
+
+Route::get('/client', [ClientController::class, 'index'])->name('client');
 
 

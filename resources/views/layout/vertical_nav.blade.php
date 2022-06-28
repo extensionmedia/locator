@@ -1,8 +1,8 @@
 <?php
 $links = [
     ['<i class="fas fa-home"></i>', 'Dashboard', route("home"), "home"],
+    ['<i class="far fa-address-card"></i>', 'Clients', route("client"), "client"],
     ['<i class="fas fa-hourglass-half"></i>', 'Locations', route("rent"), "rent"],
-    ['<i class="far fa-address-card"></i>', 'Clients', route("home"), "client"],
     ['<i class="fas fa-car-alt"></i>', 'Park Auto', route("home"), "car"],
     ['<i class="fas fa-cash-register"></i>', 'Depenses', route("home"), "expense"],
     ['<i class="fas fa-donate"></i>', 'Finances', route("home"), "finance"],
