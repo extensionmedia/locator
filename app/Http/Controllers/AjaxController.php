@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
 use Illuminate\Http\Request;
 
 class AjaxController extends Controller
@@ -19,6 +20,12 @@ class AjaxController extends Controller
                                 "auto"
                 ],
                 'activities' => HomeController::usersActivities()
+            ];
+        }
+
+        if($content == 'client' ){
+            $params = [
+                'clients' =>  Client::orderBy('client_name', 'asc')->paginate(20)
             ];
         }
         if(view()->exists('pages.'.$content.'.content'))
