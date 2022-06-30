@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Client;
+use App\Models\ClientCategory;
+use App\Models\ClientStatus;
 use Illuminate\Http\Request;
 
 class AjaxController extends Controller
@@ -25,7 +27,9 @@ class AjaxController extends Controller
 
         if($content == 'client' ){
             $params = [
-                'clients' =>  Client::orderBy('client_name', 'asc')->paginate(20)
+                'clients' =>  Client::orderBy('client_name', 'asc')->get(),
+                'clientCategories'  =>  ClientCategory::all(),
+                'clientStatuses'    =>  ClientStatus::all()
             ];
         }
         if(view()->exists('pages.'.$content.'.content'))

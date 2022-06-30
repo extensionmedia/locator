@@ -12,7 +12,13 @@ class ClientController extends Controller
 {
     public function index(){
         $clients = Client::orderBy('client_name', 'asc')->get();
-        return view('pages.client.index', ['clients'=> $clients ]);
+        $clientCategories = ClientCategory::all();
+        $clientStatuses = ClientStatus::all();
+        return view('pages.client.index', [
+            'clients'=> $clients, 
+            'clientCategories'  =>  $clientCategories,
+            'clientStatuses'    =>  $clientStatuses
+        ]);
     }
 
     public function edit(Client $client){
