@@ -1370,6 +1370,10 @@ video {
     display: flex;
   }
 
+  .lg\:table-cell {
+    display: table-cell;
+  }
+
   .lg\:h-8 {
     height: 2rem;
   }

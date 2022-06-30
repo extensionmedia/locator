@@ -59,8 +59,8 @@
                     <th class="py-3 w-20 hidden md:table-cell">Img</th>
                     <th class="py-3 text-left pl-4">Client</th>
                     <th class="py-3 text-left hidden md:table-cell">Téléphone</th>
-                    <th class="py-3 text-center hidden md:table-cell">Ville</th>
-                    <th class="py-3 hidden md:table-cell">Status</th>
+                    <th class="py-3 text-center hidden lg:table-cell">Ville</th>
+                    <th class="py-3 hidden lg:table-cell">Status</th>
                     <th class="py-3 text-right pr-2">Locations</th>
                     <th class="py-3 text-right pr-2">Crédit</th>
                     <th class="py-3"></th>
@@ -68,7 +68,7 @@
             </thead>
             <tbody>
                 @foreach ($clients as $client)
-                    <tr class="border-b hover:bg-gray-100" style="transition: all .3s">
+                    <tr class="border-b hover:bg-gray-100 text-xs" style="transition: all .3s">
                         <td class="py-1 hidden md:table-cell" style="min-width: 60px">
                             <img class="object-cover w-10 h-10 rounded-full mx-auto" src="{{ Avatar::create($client->client_name)->toBase64() }}">
                         </td>
@@ -78,14 +78,14 @@
                         <td class="w-28  hidden md:table-cell">
                             {{$client->client_telephone_1}}
                         </td>
-                        <td class="w-28 text-center hidden md:table-cell">
+                        <td class="w-28 text-center hidden lg:table-cell">
                             {{$client->client_city}}
                         </td>
-                        <td class="w-28 text-center hidden md:table-cell">
+                        <td class="w-28 text-center hidden lg:table-cell">
                             status
                         </td>
                         <td class="w-24 text-right text-xs font-bold text-orange-400 pr-2"> {{ number_format(12400, 2) }} </td>
-                        <td class="w-24 text-right text-xs font-bold text-pink-600 pr-2 ">{{ number_format(10000, 2) }} </td>
+                        <td class="w-24 text-right text-xs font-bold text-pink-600 pr-2 hidden md:table-cell ">{{ number_format(10000, 2) }} </td>
                         <td class="w-14 text-center">
                             <form class="m-0" method="POST" action="">
                                 @csrf()
