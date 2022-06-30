@@ -70,7 +70,7 @@
                 @foreach ($clients as $client)
                     <tr class="border-b hover:bg-gray-100 text-xs" style="transition: all .3s">
                         <td class="py-1 hidden md:table-cell" style="min-width: 60px">
-                            <img class="object-cover w-10 h-10 rounded-full mx-auto" src="{{ Avatar::create($client->client_name)->toBase64() }}">
+                            <img class="object-cover w-10 h-10 rounded-full mx-auto" src="{{ \Avatar::create($client->client_name)->toBase64() }}">
                         </td>
                         <td class="pl-4 py-2">
                             {{$client->client_name}}

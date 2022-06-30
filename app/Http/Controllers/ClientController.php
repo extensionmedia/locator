@@ -7,7 +7,6 @@ use App\Models\Client;
 use App\Models\ClientStatus;
 use App\Models\ClientCategory;
 use App\Models\ClientType;
-use Laravolt\Avatar\Avatar;
 
 class ClientController extends Controller
 {
