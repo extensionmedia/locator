@@ -7,13 +7,13 @@ use App\Models\Client;
 use App\Models\ClientStatus;
 use App\Models\ClientCategory;
 use App\Models\ClientType;
-use Illuminate\Support\Str;
-
+use Laravolt\Avatar\Avatar;
 
 class ClientController extends Controller
 {
     public function index(){
-        return view('pages.client.index', ['clients'=> Client::orderBy('client_name', 'asc')->paginate(20) ]);
+        $clients = Client::orderBy('client_name', 'asc')->get();
+        return view('pages.client.index', ['clients'=> $clients ]);
     }
 
     public function edit(Client $client){
