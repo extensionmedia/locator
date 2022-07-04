@@ -1,6 +1,6 @@
 
 
-<div class="container h-full py-8">
+<div class="container h-full">
     <div class="flex justify-between items-center animate-pulse mb-8">
         <div class="w-64 h-12 bg-gray-300 rounded-lg"></div>        
         <div class="w-12 h-12 bg-gray-300 border border-gray-400 rounded-full"></div>        

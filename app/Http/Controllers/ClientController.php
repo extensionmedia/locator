@@ -22,7 +22,7 @@ class ClientController extends Controller
     }
 
     public function edit(Client $client){
-        return view('client.edit')->with([
+        return view('pages.client.edit')->with([
             'client'=>$client, 
             'client_statuses' => ClientStatus::all(),
             'client_categories' => ClientCategory::all(),
@@ -31,7 +31,7 @@ class ClientController extends Controller
     }
 
     public function create(){
-        return view('client.create')->with([ 
+        return view('pages.client.create.create')->with([ 
             'client_statuses' => ClientStatus::all(),
             'client_categories' => ClientCategory::all(),
             'client_types' => ClientType::all(),

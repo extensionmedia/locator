@@ -2206,11 +2206,35 @@ $(document).ready(function () {
       },
       data: {
         content: content
+      },
+      success: function success(response) {
+        $("content").html(response);
+      },
+      error: function error(err) {
+        alert(err.statusText);
       }
-    }).done(function (response) {
-      $("content").html(response);
-    }).fail(function (error) {
-      console.log(error);
+    });
+  });
+  $(document).on('click', '.btn_add', function (e) {
+    e.preventDefault();
+    window.history.pushState($(this).data('route'), "", $(this).data('route'));
+    $("content").html(Skeleton_Loader);
+    var content = $(this).data('content');
+    $.ajax({
+      url: "/content",
+      method: "POST",
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      data: {
+        content: content
+      },
+      success: function success(response) {
+        $("content").html(response);
+      },
+      error: function error(err) {
+        alert(err.statusText);
+      }
     });
   });
 });

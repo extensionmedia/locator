@@ -31,5 +31,6 @@ Route::post('/content', [AjaxController::class, 'content'])->name('ajax.content'
 Route::get('/rent', [RentController::class, 'index'])->name('rent');
 
 Route::get('/client', [ClientController::class, 'index'])->name('client');
+Route::get('/client/create', [ClientController::class, 'create'])->name('client.create');
 
 

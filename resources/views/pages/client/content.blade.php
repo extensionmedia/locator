@@ -1,10 +1,10 @@
-<div class="h-full py-8">
+<div class="h-full">
     <div class="w-full">
         <div class="flex justify-between items-center">
             @include('components.page_title', ['title'=>'Client', 'subTitle'=>'Gestion des Clients'])
             <div class="flex items-center gap-4">
                 @include('components.buttons.btn_print')
-                @include('components.buttons.btn_add')
+                @include('components.buttons.btn_add', ['route'=>route('client.create'), 'content'=>'client.create'])
             </div>
         </div>
         <div class="md:flex items-center justify-between gap-4 mt-6 mb-4">
@@ -97,6 +97,4 @@
             </tbody>
         </table>
     </div>
-</div>    
-
-
+</div>

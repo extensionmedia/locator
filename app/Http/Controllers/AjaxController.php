@@ -32,6 +32,7 @@ class AjaxController extends Controller
                 'clientStatuses'    =>  ClientStatus::all()
             ];
         }
+        
         if(view()->exists('pages.'.$content.'.content'))
             return view('pages.'.$content.'.content', $params);
             
