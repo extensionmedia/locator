@@ -8,7 +8,7 @@
                 Nombre total des contrats
             </p>
         </div>
-        <div class="rounded-full w-12 h-12 bg-green-600 text-white pt-2 text-center text-xl">
+        <div class="rounded-full flex justify-center items-center w-12 h-12 bg-green-600 text-white text-center text-xl">
             <i class="fa-solid fa-file-lines"></i>
         </div>
     </div>

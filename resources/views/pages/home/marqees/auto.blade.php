@@ -8,7 +8,7 @@
                 Mon Parc Auto
             </p>
         </div>
-        <div class="rounded-full w-12 h-12 bg-gray-600 text-white pt-2 text-center text-xl">
+        <div class="rounded-full flex justify-center items-center w-12 h-12 bg-gray-600 text-white text-center text-xl">
             <i class="fa-solid fa-car-side"></i>
         </div>
     </div>

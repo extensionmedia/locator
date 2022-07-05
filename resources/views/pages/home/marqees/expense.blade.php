@@ -8,7 +8,7 @@
                 Total des Charges
             </p>
         </div>
-        <div class="rounded-full w-12 h-12 bg-pink-600 text-white pt-2 text-center text-xl">
+        <div class="rounded-full w-12 h-12 flex justify-center items-center bg-pink-600 text-white text-center text-xl">
             <i class="fa-solid fa-filter-circle-dollar"></i>
         </div>
     </div>

@@ -2,9 +2,8 @@
     <div class="">
         @foreach ($activities as $activity)
 
-            <div 
-                class="flex items-center mb-3">
-                <div class="w-10 test">
+            <div class="flex items-center mb-3">
+                <div class="w-10 test hidden lg:flex">
                     <img 
                         class="object-cover w-8 h-8 rounded-full cursor-pointer" 
                         src="{{ $activity['profile_photo_path'] }}"

@@ -39,7 +39,7 @@
                     @include('layout.header')
                 </div>
 
-                <content class="flex-1 px-4 pt-4 bg-gray-50 w-full overflow-y-auto">
+                <content class="flex-1 px-4 pt-4 bg-gray-50 w-full overflow-auto">
                   @yield('content') 
                 </content>
                 
