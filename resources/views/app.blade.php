@@ -12,7 +12,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,700&display=swap" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>  
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script> 
+        <script src="https://unpkg.com/flowbite@1.4.7/dist/datepicker.js"></script> 
         <script src="{{asset('js/jquery.3.6.0.js')}}"></script>
         <script src="{{asset('js/app.js')}}"></script>
 
