@@ -35,7 +35,7 @@ class ClientController extends Controller
             'client_statuses' => ClientStatus::all(),
             'client_categories' => ClientCategory::all(),
             'client_types' => ClientType::all(),
-            ]);
+        ]);
     }
 
     public function store(Request $client){
