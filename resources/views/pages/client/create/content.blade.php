@@ -26,7 +26,7 @@
 
             @include('components.inputs.age', ['label'=>'Date Naissance', 'id'=>'client_date_naissance ', 'name'=>'client_date_naissance ', 'value'=>$today])
             @include('components.inputs.email', ['label'=>'Email', 'id'=>'client_email ', 'name'=>'client_email'])
-            
+
         </div>        
         <div class="lg:w-96 bg-white rounded py-4 px-4">
 
