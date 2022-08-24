@@ -1,4 +1,6 @@
 @extends('app')
 @section('content')
-    @include('pages.client.create.content')
+    <div class="container">
+        @include('pages.client.create.content')
+    </div>
 @endsection
